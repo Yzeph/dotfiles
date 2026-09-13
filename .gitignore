@@ -1,0 +1,75 @@
+# 凭据
+gh/hosts.yml
+git/credentials
+**/.netrc
+**/sockets/
+**/secrets/
+**/token
+**/token.*
+**/*_token*
+**/*.token
+**/credential*
+**/*credential*
+**/*.key
+**/*.pem
+**/id_rsa*
+**/id_ed25519*
+**/.env
+**/.env.*
+
+# 嵌套仓库
+**/.git/
+**/.gitmodules
+
+# macOS
+.DS_Store
+**/.DS_Store
+**/.localized
+**/.Spotlight-V100/
+**/.Trashes/
+
+# Shell 历史
+**/.zsh_history
+**/.python_history
+**/.mysql_history
+**/.psql_history
+**/.rediscli_history
+**/.sqlite_history
+**/.lesshst
+**/.bash_history
+**/zsh/history
+**/.zcompdump*
+**/*.zwc
+**/*.zwc.tmp.*
+**/.zsh_sessions/
+
+# 机器本地覆盖
+zsh/modules/90-local.zsh
+
+# 运行时状态 / 缓存
+claude/
+github-copilot/
+iterm2/
+StardewValley/
+**/cache/
+**/Cache/
+**/Caches/
+**/*.db
+**/*.sqlite
+**/*.sqlite3
+**/*.log
+**/shada*
+**/swap/
+**/netrw/
+**/project-context/
+**/project-index/
+**/device-id
+**/sessions/
+
+# 备份 / 临时
+*.bak
+**/*.bak
+**/*.tar.gz
+**/*.tgz
+**/*.tmp
+**/nvim-backup-*
