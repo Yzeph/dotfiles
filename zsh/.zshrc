@@ -17,9 +17,17 @@ fi
 
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
+# Hoomebrew completion (before oh-my-zsh's compinit)
+fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting extract web-search)
 source $ZSH/oh-my-zsh.sh
 
-for _m in "$ZDOTDIR"/modules/*.zsh(N); do source "$_m"; done
+# modules, explicit load order
+source "$ZDOTDIR/modules/path.zsh"
+source "$ZDOTDIR/modules/tools.zsh"
+source "$ZDOTDIR/modules/history.zsh"
+source "$ZDOTDIR/modules/fzf.zsh"
+source "$ZDOTDIR/modules/fzf-tab.zsh"
+source "$ZDOTDIR/modules/local.zsh"
 
 source "$ZDOTDIR/p10k.zsh"

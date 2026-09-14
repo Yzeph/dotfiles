@@ -44,11 +44,13 @@ git/credentials
 **/.zsh_sessions/
 
 # 机器本地覆盖
-zsh/modules/90-local.zsh
+zsh/modules/local.zsh
+NOTES.md
 
 # 运行时状态 / 缓存
 claude/
 github-copilot/
+homebrew/
 iterm2/
 StardewValley/
 **/cache/

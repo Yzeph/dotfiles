@@ -1,8 +1,6 @@
 # dotfiles
 
-仓库根 = `~/.config`。入口链：`~/.zshenv` → `$ZDOTDIR/.zshenv`（`ZDOTDIR=~/.config/zsh`）。
-
-装新软件、搬迁工具时按下面走。
+仓库根 = `~/.config`。装新软件、搬迁工具按下面走。
 
 ## 1. 动手之前
 
@@ -18,7 +16,7 @@ strings "$(command -v <tool>)" | grep -iE 'XDG_|_HOME|_CONFIG|_CACHE'    # 确�
 
 ## 2. 加变量
 
-只改 `~/.config/zsh/.zshenv`。`~/.zshenv` 只是引导器，配置别放那儿（不在仓库里，不会版本化）。
+环境变量写 `~/.config/zsh/.zshenv`；只有登录 shell 用得着的（`brew shellenv` 这种）写 `~/.config/zsh/.zprofile`。`~/.zshenv` 只是引导器，配置别放那儿（不在仓库里，不会版本化）。
 
 ```zsh
 # 工具名
@@ -66,7 +64,3 @@ ls -d ~/.<tool> 2>/dev/null || echo 干净    # 旧路径没被重新创建
 - 不把凭据放进任何会被提交的文件
 - 不用 `git clean -fd`（在 `~/.config` 里是毁灭性操作）
 - 不动 `~/.ssh`、`~/.bashrc`、`~/Library/Caches/Homebrew`
-
-## 已知问题
-
-`NUGET_PACKAGES` 指向的 `~/.local/share/NuGet/packages` 不存在，`~/.nuget` 仍在被写 —— 该变量空转，待处理。
