@@ -10,7 +10,7 @@ if [ $? -eq 0 ]; then
 else
     if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
         . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
+    elif [ -d "/opt/homebrew/Caskroom/miniconda/base/bin" ]; then
         export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
     fi
 fi

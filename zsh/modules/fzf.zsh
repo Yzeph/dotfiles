@@ -11,5 +11,7 @@ export FZF_DEFAULT_OPTS=" \
 
 zstyle ':completion:*' ignored-patterns '.DS_Store' '*/.DS_Store'
 
-source <(fzf --zsh)
+if (( $+commands[fzf] )); then
+  source <(fzf --zsh)
+fi
 
